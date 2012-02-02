@@ -9,6 +9,8 @@ class UsersController < ApplicationController
       format.json { render json: @users }
     end
   end
+  
+  
 
   # GET /users/1
   # GET /users/1.json
