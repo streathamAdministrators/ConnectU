@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Photo:</b>
+  <%= @user_information.photo %>
+</p>
+
+<p>
+  <b>Datenaissance:</b>
+  <%= @user_information.datenaissance %>
+</p>
+
+<p>
+  <b>Lieu:</b>
+  <%= @user_information.lieu %>
+</p>
+
+<p>
+  <b>Siteinternet:</b>
+  <%= @user_information.siteinternet %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @user_information.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_information_path(@user_information) %> |
+<%= link_to 'Back', user_informations_path %>

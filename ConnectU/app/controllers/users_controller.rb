@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   # GET /users
   # GET /users.json
   def index
@@ -9,7 +10,6 @@ class UsersController < ApplicationController
       format.json { render json: @users }
     end
   end
-  
   
 
   # GET /users/1
@@ -27,7 +27,8 @@ class UsersController < ApplicationController
   # GET /users/new.json
   def new
     @user = User.new
-
+    user_information = @user.build_user_information
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @user }

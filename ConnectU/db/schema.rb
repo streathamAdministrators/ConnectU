@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120202155956) do
+ActiveRecord::Schema.define(:version => 20120202165408) do
 
   create_table "information", :force => true do |t|
     t.string   "photo"
@@ -24,6 +24,18 @@ ActiveRecord::Schema.define(:version => 20120202155956) do
   end
 
   add_index "information", ["user_id"], :name => "index_information_on_user_id"
+
+  create_table "user_informations", :force => true do |t|
+    t.string   "photo"
+    t.string   "datenaissance"
+    t.string   "lieu"
+    t.string   "siteinternet"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "user_informations", ["user_id"], :name => "index_user_informations_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "prenom"
