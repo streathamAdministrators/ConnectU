@@ -8,7 +8,20 @@
 </head>
 <body>
 
-<%= yield %>
+	<% flash.each do |name, msg| %>
+  		<%= content_tag :div, msg, :id => "flash_#{name}"%>
+	<% end %>
+	<%= yield %>
+
+	<div class="nav">
+	 	<% if current_user %>
+			Connecté en tant que <%= current_user.mail %>.
+			<%= link_to "Deconnexion", logout_path %>
+		<% else %>
+			<%= link_to "S'enregistrer", signup_path %>
+			<%= link_to "Se connecter", login_path %>
+		<% end %>
+	</div>
 
 </body>
 </html>

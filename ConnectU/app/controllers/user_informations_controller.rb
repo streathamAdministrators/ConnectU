@@ -1,4 +1,6 @@
 class UserInformationsController < ApplicationController
+  before_filter :authorize 
+  
   # GET /user_informations
   # GET /user_informations.json
   def index
