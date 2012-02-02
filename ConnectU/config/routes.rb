@@ -1,8 +1,13 @@
 ConnectU::Application.routes.draw do
+  get "sessions/new"
+  resources :sessions
+  resources :statuts
   resources :user_informations
 
   resources :users
   resources :information
+  
+  match 'login' => 'sessions#new'
   
   root :to => 'users#index'
 

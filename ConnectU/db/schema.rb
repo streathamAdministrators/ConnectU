@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120202165408) do
+ActiveRecord::Schema.define(:version => 20120202171434) do
 
   create_table "information", :force => true do |t|
     t.string   "photo"
@@ -24,6 +24,16 @@ ActiveRecord::Schema.define(:version => 20120202165408) do
   end
 
   add_index "information", ["user_id"], :name => "index_information_on_user_id"
+
+  create_table "statuts", :force => true do |t|
+    t.string   "body"
+    t.string   "auteur"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "statuts", ["user_id"], :name => "index_statuts_on_user_id"
 
   create_table "user_informations", :force => true do |t|
     t.string   "photo"
@@ -41,7 +51,7 @@ ActiveRecord::Schema.define(:version => 20120202165408) do
     t.string   "prenom"
     t.string   "nom"
     t.string   "mail"
-    t.string   "password"
+    t.string   "password_digest"
     t.string   "isvisible"
     t.datetime "created_at"
     t.datetime "updated_at"

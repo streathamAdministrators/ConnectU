@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Body:</b>
+  <%= @statut.body %>
+</p>
+
+<p>
+  <b>Auteur:</b>
+  <%= @statut.auteur %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @statut.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_statut_path(@statut) %> |
+<%= link_to 'Back', statuts_path %>
