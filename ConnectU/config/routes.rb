@@ -1,6 +1,5 @@
 ConnectU::Application.routes.draw do
   resources :users
-
   resources :information
   
   root :to => 'users#index'
