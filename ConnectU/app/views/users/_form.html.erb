@@ -27,10 +27,26 @@
     <%= f.label :password %><br />
     <%= f.text_field :password %>
   </div>
-  <div class="field">
-    <%= f.label :isvisible %><br />
-    <%= f.text_field :isvisible %>
-  </div>
+	
+  <%= f.fields_for :user_information do |builder| %>
+	  <div class="field">
+	    <%= builder.label :photo %><br />
+	    <%= builder.text_field :photo %>
+	  </div>
+	  <div class="field">
+	    <%= builder.label :datenaissance %><br />
+	    <%= builder.text_field :datenaissance %>
+	  </div>
+	  <div class="field">
+	    <%= builder.label :lieu %><br />
+	    <%= builder.text_field :lieu %>
+	  </div>
+	  <div class="field">
+	    <%= builder.label :siteinternet %><br />
+	    <%= builder.text_field :siteinternet %>
+	  </div>
+  <% end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>
