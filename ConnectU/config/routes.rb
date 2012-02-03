@@ -1,6 +1,6 @@
 ConnectU::Application.routes.draw do
   
-  et "login" => "sessions#new", :as => "login"
+  get "login" => "sessions#new", :as => "login"
   get "logout" => "sessions#destroy", :as => "logout"
   get "signup" => "users#new", :as => "signup"
 

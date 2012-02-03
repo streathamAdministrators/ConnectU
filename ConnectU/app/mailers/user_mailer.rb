@@ -1,9 +1,10 @@
 class UserMailer < ActionMailer::Base
   default from: "gui.ness34000@gmail.com"
   
-   def welcome_email(user)
-    @user = user
+   def welcome_email(addresse, user)
+    @addresse = addresse
     @url  = "http://localhost:3000/users/new"
-    mail(:to => user.mail, :subject => "New to Connect U ?")
+    @user = user
+    mail(:to => @addresse, :subject => "New to Connect U ?")
   end
 end

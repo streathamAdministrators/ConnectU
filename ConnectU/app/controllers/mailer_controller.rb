@@ -1,5 +1,5 @@
 class MailerController < ApplicationController
-
+ before_filter :authorize
   # GET
   def index
    @addresse = ""
@@ -7,9 +7,9 @@ class MailerController < ApplicationController
   
   # POST
    def create
-    @user = User.last
-
-    UserMailer.welcome_email(@user).deliver
+    @addresse = params[:addresse]
+    @user = User.find_by_id(session[:user_id]) 
+    UserMailer.welcome_email(@addresse, @user).deliver
     redirect_to users_path
   end
   
