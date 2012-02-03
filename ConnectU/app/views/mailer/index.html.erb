@@ -1,0 +1,12 @@
+<h1>Inviter les gens: </h1>
+
+<%= form_for(@addresse) do |f| %>
+  <div class="field">
+    <%= f.label "addresse" %><br />
+    <%= f.text_field :adresse %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+<%= link_to 'Back', users_path %>

@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
+<<<<<<< HEAD
   before_filter :authorize 
   
+=======
+
+>>>>>>> 102439414ecad5d4e5c995c85c512fc230085e33
   # GET /users
   # GET /users.json
   def index
@@ -11,6 +15,7 @@ class UsersController < ApplicationController
       format.json { render json: @users }
     end
   end
+  
 
   # GET /users/1
   # GET /users/1.json
