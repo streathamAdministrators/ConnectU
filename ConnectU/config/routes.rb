@@ -1,7 +1,5 @@
 ConnectU::Application.routes.draw do
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   get "login" => "sessions#new", :as => "login"
   get "logout" => "sessions#destroy", :as => "logout"
   get "signup" => "users#new", :as => "signup"
@@ -13,15 +11,8 @@ ConnectU::Application.routes.draw do
 
   resources :users
   resources :information
-=======
+
   resources :user_informations, :users, :information
->>>>>>> 102439414ecad5d4e5c995c85c512fc230085e33
-=======
-  resources :user_informations, :users, :information
->>>>>>> 102439414ecad5d4e5c995c85c512fc230085e33
-=======
-  resources :user_informations, :users, :information
->>>>>>> 102439414ecad5d4e5c995c85c512fc230085e33
   
   resources :mailer
 
