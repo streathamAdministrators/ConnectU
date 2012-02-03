@@ -1,5 +1,4 @@
 ConnectU::Application.routes.draw do
-
   resources :user_informations, :users, :information
   
   resources :mailer
