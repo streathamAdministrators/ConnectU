@@ -1,7 +1,11 @@
 class UsersController < ApplicationController
 <<<<<<< HEAD
+<<<<<<< HEAD
   before_filter :authorize 
   
+=======
+
+>>>>>>> 102439414ecad5d4e5c995c85c512fc230085e33
 =======
 
 >>>>>>> 102439414ecad5d4e5c995c85c512fc230085e33
