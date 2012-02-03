@@ -1,4 +1,17 @@
 ConnectU::Application.routes.draw do
+  
+  et "login" => "sessions#new", :as => "login"
+  get "logout" => "sessions#destroy", :as => "logout"
+  get "signup" => "users#new", :as => "signup"
+
+  resources :sessions
+
+  resources :statuts
+  resources :user_informations
+
+  resources :users
+  resources :information
+  
   resources :user_informations, :users, :information
   
   resources :mailer
