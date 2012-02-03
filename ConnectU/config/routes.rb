@@ -1,11 +1,9 @@
 ConnectU::Application.routes.draw do
-  resources :user_informations
-
-  resources :users
-  resources :information
-
-  resources :mailer
+  resources :user_informations, :users, :information
   
+  resources :mailer
+
+    
   root :to => 'users#index'
 
   # The priority is based upon order of creation:

@@ -6,7 +6,7 @@ class MailerController < ApplicationController
   end
   
   # POST
-   def suscribeLetter
+   def create
     @user = User.last
 
     UserMailer.welcome_email(@user).deliver
