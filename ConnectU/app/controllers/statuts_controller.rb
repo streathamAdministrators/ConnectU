@@ -40,17 +40,21 @@ class StatutsController < ApplicationController
   # POST /statuts
   # POST /statuts.json
   def create
-    @statut = Statut.new(params[:statut])
+    #@statut = Statut.new(params[:statut])
 
-    respond_to do |format|
-      if @statut.save
-        format.html { redirect_to @statut, notice: 'Statut was successfully created.' }
-        format.json { render json: @statut, status: :created, location: @statut }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @statut.errors, status: :unprocessable_entity }
-      end
-    end
+    #respond_to do |format|
+    #  if @statut.save
+    #    format.html { redirect_to @statut, notice: 'Statut was successfully created.' }
+    #    format.json { render json: @statut, status: :created, location: @statut }
+    #  else
+    #    format.html { render action: "new" }
+    #    format.json { render json: @statut.errors, status: :unprocessable_entity }
+    #  end
+    #end
+    
+    @user = User.find(params[:user_id])
+    @statut = @user.statuts.create(params[:statut])
+    redirect_to user_path(@user)
   end
 
   # PUT /statuts/1
